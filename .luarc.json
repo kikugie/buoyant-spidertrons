@@ -1,0 +1,29 @@
+{
+  "workspace.preloadFileSize": 5000,
+  "workspace.library": [
+    "/home/kikugie/IdeaProjects/factorio-runtime"
+  ],
+  "diagnostics.globals": [
+    "game",
+    "settings",
+    "script",
+    "global",
+    "entity",
+    "defines",
+    "data",
+    "rendering",
+    "mods",
+    "log",
+    "util",
+    "table",
+    "serpent",
+    "table_size",
+    "commands",
+    "remote"
+  ],
+  "diagnostics.disable": [
+    "trailing-space",
+    "lowercase-global",
+        "deprecated"
+  ]
+}
