@@ -24,7 +24,8 @@ local function add_equipment(event)
         name = entity.name .. "-buoyant",
         position = entity.position,
         force = entity.force,
-        create_build_effect_smoke = false
+        quality = entity.quality,
+        create_build_effect_smoke = false,
     }
     if not new_spider then return end
     spidertron_lib.deserialise_spidertron(new_spider, spider_data, true)

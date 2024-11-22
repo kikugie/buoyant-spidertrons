@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Bugfixes:
+    - Fixed crash when the graphics set is not present
+    - Removed white outline from the mod icon
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Bugfixes:
+    - Fixed naming issues
+    - Updated mod icon
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Bugfixes:
+    - Fixed quality transfer bug
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Features:
+    - Initial release

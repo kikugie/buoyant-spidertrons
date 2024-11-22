@@ -71,9 +71,11 @@ local function create_jesus_spidertron(spider)
             }
         }
         -- `leg.graphics_set.foot` could be used, but it looks worse
-        apply_textures(leg.graphics_set.lower_part)
-        apply_textures(leg.graphics_set.lower_part_shadow)
-        apply_textures(leg.graphics_set.lower_part_water_reflection)
+        if leg.graphics_set then
+            apply_textures(leg.graphics_set.lower_part)
+            apply_textures(leg.graphics_set.lower_part_shadow)
+            apply_textures(leg.graphics_set.lower_part_water_reflection)
+        end
         table.insert(mod_data, leg)
     end
     spider_copy.spider_engine.legs = new_legs
