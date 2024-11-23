@@ -1,9 +1,11 @@
 local constants = require "constants"
+local simulations = require "simulations"
 
 local buoy_item = table.deepcopy(data.raw["item"]["belt-immunity-equipment"])
 buoy_item.name = constants.buoy_item
 buoy_item.icon = constants.mod_path .. "/graphics/icons/buoy.png"
 buoy_item.place_as_equipment_result = constants.buoy_item
+buoy_item.factoriopedia_simulation = simulations.buoy_effect
 
 local buoy_equipment = table.deepcopy(data.raw["night-vision-equipment"]["night-vision-equipment"])
 buoy_equipment.name = constants.buoy_item
@@ -39,7 +41,6 @@ local buoy_recipe = {
     results = { { type = "item", name = constants.buoy_item, amount = 1 } }
 }
 
--- TODO: Make proper technology icon
 local buoy_science = {
     { "automation-science-pack", 1 },
     { "logistic-science-pack",   1 },

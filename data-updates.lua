@@ -18,7 +18,7 @@ local function make_sprite_buoyant(sprite)
 end
 
 ---@param leg data.SpiderLegPart
-local function apply_textures(leg)
+local function make_leg_buoyant(leg)
     local sprite = leg.bottom_end
     if not sprite then return end
     make_sprite_buoyant(sprite)
@@ -72,9 +72,9 @@ local function create_jesus_spidertron(spider)
         }
         -- `leg.graphics_set.foot` could be used, but it looks worse
         if leg.graphics_set then
-            apply_textures(leg.graphics_set.lower_part)
-            apply_textures(leg.graphics_set.lower_part_shadow)
-            apply_textures(leg.graphics_set.lower_part_water_reflection)
+            make_leg_buoyant(leg.graphics_set.lower_part)
+            make_leg_buoyant(leg.graphics_set.lower_part_shadow)
+            make_leg_buoyant(leg.graphics_set.lower_part_water_reflection)
         end
         table.insert(mod_data, leg)
     end
