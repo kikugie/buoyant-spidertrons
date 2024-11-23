@@ -45,10 +45,14 @@ local function create_jesus_spidertron(spider)
     -- Make it placeable with normal spidertron
     spider_copy.fast_replaceable_group = spider.fast_replaceable_group or spider.name
     spider_copy.deconstruction_alternative = spider.name
-    spider_copy.placeable_by = {
-        item = spider.minable.result,
-        count = spider.minable.count or 1
-    }
+    if spider.placeable_by then
+        spider_copy.placeable_by = spider.placeable_by
+    elseif spider.minable then
+        spider_copy.placeable_by = {
+            item = spider.minable.result,
+            count = spider.minable.count or 1
+        }
+    end
 
     local new_legs = {}
     for _, spec in iter(spider_copy.spider_engine.legs) do

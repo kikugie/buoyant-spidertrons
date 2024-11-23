@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Bugfixes:
+    - Fixed crash with non-minable spidertrons.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
   Gui:
     - Added factoriopedia simulation for the buoy mechanics.
@@ -8,13 +12,13 @@ Version: 1.0.4
 Version: 1.0.3
   Bugfixes:
     - Fixed crash when the graphics set is not present.
-    Graphics:
+  Graphics:
     - Removed white outline from the mod icon.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
   Bugfixes:
     - Fixed naming issues.
-    Graphics:
+  Graphics:
     - Updated mod icon.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
