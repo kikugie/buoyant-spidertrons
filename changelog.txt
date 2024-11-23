@@ -1,18 +1,26 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.2
+Version: 1.0.4
+  Gui:
+    - Added factoriopedia simulation for the buoy mechanics.
+  Translation:
+    - Improved item name consistency.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
   Bugfixes:
-    - Fixed crash when the graphics set is not present
-    - Removed white outline from the mod icon
+    - Fixed crash when the graphics set is not present.
+    Graphics:
+    - Removed white outline from the mod icon.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
   Bugfixes:
-    - Fixed naming issues
-    - Updated mod icon
+    - Fixed naming issues.
+    Graphics:
+    - Updated mod icon.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
   Bugfixes:
-    - Fixed quality transfer bug
+    - Fixed quality transfer bug.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-  Features:
-    - Initial release
+  Major features:
+    - Initial release.
