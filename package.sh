@@ -22,8 +22,12 @@ mkdir "$temp_dir/$folder_name"
 excluded=(
   "$(basename "$0")"
   "."
-  "*.idea"
-  "node_modules"   # Add more patterns as needed
+  ".git"
+  ".run"
+  ".idea"
+  ".github"
+  "releases"
+  "node_modules"
 )
 
 # Construct the find command with exclude patterns
@@ -39,7 +43,7 @@ eval "$find_command"
 (cd "$temp_dir" && zip -r "$archive_name" "$folder_name")
 
 # Default output directory is the current directory
-output_dir="."
+output_dir="releases"
 # If an argument is provided, use it as the output directory
 if [ "$#" -ge 1 ]; then
   output_dir="$1"
