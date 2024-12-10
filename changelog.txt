@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Bugfixes:
+    - Fixed newly placed spidertrons not being updated to buoyant variant.
+  Changes:
+    - Buoyant variants are no longer created for hidden entities.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Bugfixes:
+    - Fixed quality transfer when removing the buoy.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Bugfixes:
+    - Fixed crash with missing spidertron leg graphics (are you kidding me?!).
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
   Bugfixes:
     - Fixed crash with non-minable spidertrons.
@@ -26,5 +40,5 @@ Version: 1.0.1
     - Fixed quality transfer bug.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-  Major features:
+  Major Features:
     - Initial release.

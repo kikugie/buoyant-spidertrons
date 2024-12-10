@@ -46,6 +46,7 @@ local function remove_equipment(event)
         name = entity.name:sub(1, -9),
         position = entity.position,
         force = entity.force,
+        quality = entity.quality,
         create_build_effect_smoke = false
     }
     if not new_spider then return end
@@ -53,5 +54,6 @@ local function remove_equipment(event)
     entity.destroy()
 end
 
+script.on_event(defines.events.on_built_entity, add_equipment, { filter = "vehicle" })
 script.on_event(defines.events.on_equipment_inserted, add_equipment)
 script.on_event(defines.events.on_equipment_removed, remove_equipment)

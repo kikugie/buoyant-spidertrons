@@ -17,8 +17,9 @@ local function make_sprite_buoyant(sprite)
     end
 end
 
----@param leg data.SpiderLegPart
+---@param leg data.SpiderLegPart?
 local function make_leg_buoyant(leg)
+    if not leg then return end
     local sprite = leg.bottom_end
     if not sprite then return end
     make_sprite_buoyant(sprite)
@@ -32,7 +33,7 @@ end
 ---@param spider data.SpiderVehiclePrototype
 local function create_jesus_spidertron(spider)
     -- Don't add buoyancy if it doesn't support equipment
-    if not spider.equipment_grid then return end
+    if spider.hidden or not spider.equipment_grid then return end
     local spider_copy = table.deepcopy(spider)
 
     -- Hide the duplicate entity and give it a new name
