@@ -87,14 +87,24 @@ local function create_jesus_spidertron(spider)
     table.insert(mod_data, spider_copy)
 end
 
--- Mutate the default spidertron table
-local default_grid = table.deepcopy(data.raw["equipment-grid"]["spidertron-equipment-grid"])
-table.insert(default_grid.equipment_categories, "buoyant")
-table.insert(mod_data, default_grid)
+local registered_grids = {}
+
+---@param grid data.EquipmentGridID
+local function enable_buoy_in_grid(grid)
+    local instance = table.deepcopy(data.raw["equipment-grid"][grid])
+    table.insert(instance.equipment_categories, "buoyant")
+    table.insert(mod_data, instance)
+    registered_grids[grid] = true
+end
 
 -- Create buoyant variants of spidertrons
 for _, spidertron in pairs(data.raw["spider-vehicle"]) do
     create_jesus_spidertron(spidertron)
+
+    local grid_type = spidertron.equipment_grid
+    if grid_type ~= nil and registered_grids[grid_type] == nil then
+        enable_buoy_in_grid(grid_type)
+    end
 end
 
 data:extend(mod_data)

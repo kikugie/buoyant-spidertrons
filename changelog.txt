@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+  Bugfixes:
+    - Fixed support for spidertrons with custom equipment grids.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+  Bugfixes:
+    - Crash when a vehicle without an equipment grid is spawned.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+  Bugfixes:
+    - Crash due to an incorrect filter specification
+---------------------------------------------------------------------------------------------------
 Version: 1.0.8
   Bugfixes:
     - Fixed newly placed spidertrons not being updated to buoyant variant.

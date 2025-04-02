@@ -54,6 +54,14 @@ local function remove_equipment(event)
     entity.destroy()
 end
 
-script.on_event(defines.events.on_built_entity, add_equipment, { filter = "vehicle" })
+---@param event EventData.on_built_entity
+local function check_entity(event)
+    if event.entity.type ~= "spider-vehicle" or not event.entity.grid then return end
+    if not event.entity.grid.find(constants.buoy_item) then return end
+    ---@diagnostic disable-next-line: missing-fields
+    add_equipment { grid = event.entity.grid, equipment = { name = constants.buoy_item } }
+end
+
+script.on_event(defines.events.on_built_entity, check_entity, { { filter = "vehicle" } })
 script.on_event(defines.events.on_equipment_inserted, add_equipment)
 script.on_event(defines.events.on_equipment_removed, remove_equipment)
